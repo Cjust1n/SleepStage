@@ -1,0 +1,19 @@
+{
+  "session_id": "2026-08-08_23-00-40",
+  "date": "2026-08-08",
+  "start_time": "23:00:40",
+  "end_time": "02:21:56",
+  "duration_seconds": 12076.1,
+  "board_name": "Grove Vision AI V2",
+  "firmware_version": "0.9.4",
+  "serial_port": "",
+  "baudrate": 921600,
+  "sample_counts": {
+    "accel": 0,
+    "ppg": 0,
+    "feature": 0,
+    "prediction": 0,
+    "total": 2382885
+  },
+  "total_packets": 2382885
+}

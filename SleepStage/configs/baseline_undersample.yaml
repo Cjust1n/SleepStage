@@ -1,0 +1,79 @@
+processed_dir: "processed_15_all"
+outputs_dir: "outputs"
+
+sequence_length: 30
+step: 1
+require_contiguous: true
+ # "gru", "lstm", "tcn_lstm",  "cnn", or "simple_rnn" or multi_tcn
+model_type: "gru_real"
+hidden_units: 64
+dropout: 0 #default 0.3
+bidirectional: false
+
+batch_size: 64
+epochs: 100
+learning_rate: 0.0001
+patience: 5
+
+# Optional explicit subject lists. If null, it will auto-partition deterministically.
+train_subjects: null
+val_subjects: null
+test_subjects: null
+
+val_size_subjects: 10
+test_size_subjects: 10
+
+seed: 42
+
+# Enable undersampling + weighted loss training.
+# Undersampling reduces the training set, while class_weight still keeps
+# minority classes emphasized during loss computation.
+use_class_weight: false
+use_undersampling: false
+undersample_seed: 42
+
+feature_preset: "all"  # "all", "no_hrv", "no_movement", "no_temporal", "hrv_only", "movement_only", "temporal_only"
+use_feature_subset: true
+feature_subset:
+  processed_dir: "processed_15_all"
+  feature_preset: "all"
+  feature_subset:
+    - relative_position
+    - sd2
+    - sin_time_of_night
+    - rolling_mean_hr
+    - rmssd
+    - time_of_night
+    - energy
+    - rolling_hr_range
+    - acceleration_jerk
+    - rolling_mean_acc
+    - rms
+    - lf
+    - rolling_std_acc
+    - zero_crossing
+    - hr_slope
+    - hf
+    - lf_hf
+    - hr_delta
+
+# Feature-group mode for modality occlusion experiments.
+# Valid values:
+# all, no_hrv, no_movement, no_temporal, hrv_only, movement_only, temporal_only
+#
+feature_group_mode: "all"
+
+# Noise-based oversampling (active when use_undersampling=false)
+# Duplikat sample kelas minoritas + Gaussian noise per-feature (std = noise_oversample_std * feature_std)
+# sehingga jumlah sample per kelas sama dengan kelas mayoritas.
+# Dilakukan SEBELUM scaling agar scaler mempelajari distribusi seimbang.
+#use_noise_oversampling: false
+noise_oversample_std: 0.05
+
+# Build proper temporal sequences using SequenceCreator.
+# This enables models (TCN/GRU/LSTM) to learn temporal dependencies.
+use_prebuilt_sequences: false #default false
+
+
+quantize_int8: true
+representative_steps: 200

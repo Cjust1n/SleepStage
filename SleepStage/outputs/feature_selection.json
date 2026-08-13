@@ -1,0 +1,40 @@
+{
+  "mode": "feature_subset",
+  "selected_features": [
+    "relative_position",
+    "sd2",
+    "sin_time_of_night",
+    "rolling_mean_hr",
+    "rmssd",
+    "time_of_night",
+    "energy",
+    "rolling_hr_range",
+    "acceleration_jerk",
+    "rolling_mean_acc",
+    "rms",
+    "lf",
+    "rolling_std_acc",
+    "zero_crossing",
+    "hr_slope",
+    "hf",
+    "lf_hf",
+    "hr_delta"
+  ],
+  "removed_features": [
+    "mean_ibi",
+    "mean_hr",
+    "sdnn",
+    "sdsd",
+    "nn50",
+    "pnn50",
+    "sd1",
+    "mean_acc",
+    "std_acc",
+    "variance",
+    "movement_count",
+    "movement_ratio",
+    "cos_time_of_night",
+    "rolling_std_hr"
+  ],
+  "n_selected_features": 18
+}

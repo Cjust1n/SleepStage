@@ -1,0 +1,7 @@
+# Parameter terbaik untuk peak detection
+# Threshold Method (direkomendasikan untuk dataset noisy)
+THRESHOLD_RATIO=0.900
+REFRACTORY_MS=250
+MA_WINDOW=5
+# Kinerja: 100.0% valid, 0.0% no peak
+# Mean HR: 89.4 BPM

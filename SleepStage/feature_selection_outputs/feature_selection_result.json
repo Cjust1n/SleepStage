@@ -1,0 +1,245 @@
+{
+  "config": {
+    "processed_dir": "processed_15_all",
+    "feature_names_path": null,
+    "train_subjects": null,
+    "val_subjects": null,
+    "test_subjects": null,
+    "val_size_subjects": 1,
+    "test_size_subjects": 1,
+    "rf_n_estimators": 250,
+    "rf_max_depth": null,
+    "rf_min_samples_leaf": 2,
+    "rf_random_state": 42,
+    "rf_importance_floor": 1e-06,
+    "corr_method": "pearson",
+    "corr_threshold": 0.84,
+    "exclude_features": [
+      "sdnn",
+      "sdsd",
+      "sd1",
+      "mean_ibi"
+    ],
+    "output_dir": "feature_selection_outputs"
+  },
+  "n_samples": 198860,
+  "n_train_samples": 188729,
+  "n_val_samples": 6133,
+  "n_test_samples": 3998,
+  "n_features_total": 32,
+  "n_features_after_importance": 28,
+  "n_features_final": 18,
+  "split_subjects": {
+    "train": [
+      "Bidslab02",
+      "Bidslab06",
+      "Bidslab07",
+      "Bidslab08",
+      "Bidslab09",
+      "Bidslab10",
+      "Bidslab11",
+      "Bidslab13",
+      "Bidslab14",
+      "Bidslab15",
+      "Bidslab16",
+      "Bidslab17",
+      "Bidslab18",
+      "Bidslab19",
+      "Bidslab20",
+      "Bidslab22",
+      "Bidslab30",
+      "Bidslab31",
+      "Bidslab32",
+      "Bidslab34",
+      "Bidslab35",
+      "Bidslab36",
+      "Bidslab38",
+      "Bidslab39",
+      "Bidslab40",
+      "Bidslab41",
+      "Bidslab42",
+      "Bidslab43",
+      "Bidslab44",
+      "Bidslab45",
+      "Bidslab47",
+      "Bidslab49",
+      "Bidslab50",
+      "Bidslab51",
+      "Bidslab52",
+      "Bidslab53",
+      "Bidslab55",
+      "Bidslab56",
+      "Bidslab60",
+      "Bidslab62",
+      "Bidslab63",
+      "Bidslab64",
+      "Bidslab65",
+      "Bidslab66",
+      "Bidslab68"
+    ],
+    "val": [
+      "Bidslab00"
+    ],
+    "test": [
+      "Bidslab01"
+    ]
+  },
+  "rf_importances_sorted": [
+    {
+      "feature": "relative_position",
+      "rf_importance": 0.1401073485851311
+    },
+    {
+      "feature": "sd2",
+      "rf_importance": 0.07947276217572377
+    },
+    {
+      "feature": "cos_time_of_night",
+      "rf_importance": 0.05709293421838339
+    },
+    {
+      "feature": "sin_time_of_night",
+      "rf_importance": 0.054711099186387835
+    },
+    {
+      "feature": "rolling_mean_hr",
+      "rf_importance": 0.04169338077582976
+    },
+    {
+      "feature": "mean_hr",
+      "rf_importance": 0.040379376167673696
+    },
+    {
+      "feature": "rmssd",
+      "rf_importance": 0.03981773317604688
+    },
+    {
+      "feature": "time_of_night",
+      "rf_importance": 0.039261507433946324
+    },
+    {
+      "feature": "energy",
+      "rf_importance": 0.03866668212764239
+    },
+    {
+      "feature": "rolling_hr_range",
+      "rf_importance": 0.03663883466438589
+    },
+    {
+      "feature": "acceleration_jerk",
+      "rf_importance": 0.03403200512852558
+    },
+    {
+      "feature": "rolling_std_hr",
+      "rf_importance": 0.03301137554398147
+    },
+    {
+      "feature": "rolling_mean_acc",
+      "rf_importance": 0.032187549958892336
+    },
+    {
+      "feature": "std_acc",
+      "rf_importance": 0.03146286581646297
+    },
+    {
+      "feature": "rms",
+      "rf_importance": 0.030040966700965083
+    },
+    {
+      "feature": "mean_acc",
+      "rf_importance": 0.030032441237461373
+    },
+    {
+      "feature": "lf",
+      "rf_importance": 0.02733509374473523
+    },
+    {
+      "feature": "rolling_std_acc",
+      "rf_importance": 0.027319843638757644
+    },
+    {
+      "feature": "zero_crossing",
+      "rf_importance": 0.026723518397549467
+    },
+    {
+      "feature": "hr_slope",
+      "rf_importance": 0.025036433848922762
+    },
+    {
+      "feature": "hf",
+      "rf_importance": 0.024133262965969852
+    },
+    {
+      "feature": "pnn50",
+      "rf_importance": 0.02249174088774929
+    },
+    {
+      "feature": "lf_hf",
+      "rf_importance": 0.022090979893304954
+    },
+    {
+      "feature": "hr_delta",
+      "rf_importance": 0.020826676211981372
+    },
+    {
+      "feature": "variance",
+      "rf_importance": 0.01905055192932051
+    },
+    {
+      "feature": "nn50",
+      "rf_importance": 0.016768351924209387
+    },
+    {
+      "feature": "movement_ratio",
+      "rf_importance": 0.005076549465059942
+    },
+    {
+      "feature": "movement_count",
+      "rf_importance": 0.004538134195000001
+    }
+  ],
+  "excluded_features": [
+    "mean_ibi",
+    "sdnn",
+    "sdsd",
+    "sd1"
+  ],
+  "dropped_by_importance": [
+    "mean_ibi",
+    "sdnn",
+    "sdsd",
+    "sd1"
+  ],
+  "final_selected_features": [
+    "relative_position",
+    "sd2",
+    "sin_time_of_night",
+    "rolling_mean_hr",
+    "rmssd",
+    "time_of_night",
+    "energy",
+    "rolling_hr_range",
+    "acceleration_jerk",
+    "rolling_mean_acc",
+    "rms",
+    "lf",
+    "rolling_std_acc",
+    "zero_crossing",
+    "hr_slope",
+    "hf",
+    "lf_hf",
+    "hr_delta"
+  ],
+  "dropped_by_correlation": [
+    "cos_time_of_night",
+    "mean_hr",
+    "rolling_std_hr",
+    "std_acc",
+    "mean_acc",
+    "pnn50",
+    "variance",
+    "nn50",
+    "movement_ratio",
+    "movement_count"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "config": {
+    "processed_dir": "/home/christopher-justin/Downloads/SleepStage/processed",
+    "feature_names_path": null,
+    "rf_n_estimators": 250,
+    "rf_max_depth": null,
+    "rf_min_samples_leaf": 2,
+    "rf_random_state": 42,
+    "rf_importance_floor": 1e-06,
+    "corr_method": "pearson",
+    "corr_threshold": 0.9,
+    "exclude_features": [
+      "sdnn",
+      "sdsd",
+      "sd1",
+      "mean_ibi"
+    ],
+    "output_dir": "/home/christopher-justin/Downloads/SleepStage/outputs/feature_selection_run_corr090"
+  },
+  "n_samples": 198860,
+  "n_features_total": 22,
+  "n_features_after_importance": 18,
+  "n_features_final": 14,
+  "rf_importances_sorted": [
+    {
+      "feature": "relative_position",
+      "rf_importance": 0.14434369132448613
+    },
+    {
+      "feature": "elapsed_sleep",
+      "rf_importance": 0.13375175020791638
+    },
+    {
+      "feature": "sd2",
+      "rf_importance": 0.10548612831140004
+    },
+    {
+      "feature": "time_of_night",
+      "rf_importance": 0.07535792683970904
+    },
+    {
+      "feature": "mean_hr",
+      "rf_importance": 0.07436412043672262
+    },
+    {
+      "feature": "energy",
+      "rf_importance": 0.05505320462071039
+    },
+    {
+      "feature": "rmssd",
+      "rf_importance": 0.05145547827280448
+    },
+    {
+      "feature": "mean_acc",
+      "rf_importance": 0.047461959271680884
+    },
+    {
+      "feature": "rms",
+      "rf_importance": 0.04708428754400237
+    },
+    {
+      "feature": "std_acc",
+      "rf_importance": 0.04604658558440664
+    },
+    {
+      "feature": "zero_crossing",
+      "rf_importance": 0.0374631047662944
+    },
+    {
+      "feature": "lf",
+      "rf_importance": 0.03501023863262259
+    },
+    {
+      "feature": "hf",
+      "rf_importance": 0.03179049231529657
+    },
+    {
+      "feature": "variance",
+      "rf_importance": 0.028613105914615057
+    },
+    {
+      "feature": "lf_hf",
+      "rf_importance": 0.028408243222860365
+    },
+    {
+      "feature": "pnn50",
+      "rf_importance": 0.027299921755868203
+    },
+    {
+      "feature": "nn50",
+      "rf_importance": 0.02149338810285411
+    },
+    {
+      "feature": "movement_count",
+      "rf_importance": 0.009516372875749713
+    }
+  ],
+  "excluded_features": [
+    "mean_ibi",
+    "sdnn",
+    "sdsd",
+    "sd1"
+  ],
+  "dropped_by_importance": [
+    "mean_ibi",
+    "sdnn",
+    "sdsd",
+    "sd1"
+  ],
+  "final_selected_features": [
+    "relative_position",
+    "sd2",
+    "time_of_night",
+    "mean_hr",
+    "energy",
+    "rmssd",
+    "mean_acc",
+    "std_acc",
+    "zero_crossing",
+    "lf",
+    "hf",
+    "variance",
+    "lf_hf",
+    "nn50"
+  ],
+  "dropped_by_correlation": [
+    "elapsed_sleep",
+    "rms",
+    "pnn50",
+    "movement_count"
+  ]
+}

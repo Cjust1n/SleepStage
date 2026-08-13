@@ -1,0 +1,40 @@
+processed_dir: "processed"
+outputs_dir: "outputs"
+
+sequence_length: 30
+
+step: 1
+require_contiguous: true
+
+model_type: "tcn_lstm"
+hidden_units: 64
+filters: 64
+kernel_size: 3
+dilations:
+  - 1
+  - 2
+  - 4
+  - 8
+dropout: 0.2
+use_separable_conv: true
+bidirectional: false
+
+batch_size: 64
+epochs: 30
+learning_rate: 0.0001
+patience: 5
+
+# Optional explicit subject lists. If null, it will auto-partition deterministically.
+train_subjects: null
+val_subjects: null
+test_subjects: null
+
+val_size_subjects: 1
+test_size_subjects: 1
+
+seed: 42
+
+use_class_weight: true
+
+quantize_int8: true
+representative_steps: 200

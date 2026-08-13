@@ -1,0 +1,20 @@
+import numpy as np
+
+X = np.load("processed/X.npy", mmap_mode="r")
+y = np.load("processed/y.npy")
+
+print("X shape =", X.shape)
+print("y shape =", y.shape)
+
+from pathlib import Path
+
+chunk = sorted(Path("processed/batches").glob("X_*.npy"))[0]
+
+Xc = np.load(chunk)
+print(chunk)
+print(Xc.shape)
+
+chunk_y = sorted(Path("processed/batches").glob("y_*.npy"))[0]
+
+yc = np.load(chunk_y)
+print(yc.shape)

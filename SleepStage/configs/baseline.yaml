@@ -1,0 +1,36 @@
+processed_dir: "processed_15_all"
+outputs_dir: "outputs"
+
+sequence_length: 30
+
+step: 1
+require_contiguous: true
+
+model_type: "gru"   # "gru" or "lstm"
+hidden_units: 128
+dropout: 0.2
+bidirectional: false
+
+batch_size: 64
+epochs: 30
+learning_rate: 0.0001
+patience: 7
+
+# Optional explicit subject lists. If null, it will auto-partition deterministically.
+train_subjects: null
+val_subjects: null
+test_subjects: null
+
+val_size_subjects: 5
+test_size_subjects: 5
+
+seed: 42
+
+use_class_weight: false
+
+feature_preset: "all"
+feature_subset: null
+
+quantize_int8: true
+representative_steps: 200
+

@@ -1,0 +1,37 @@
+processed_dir: "processed_15_all"
+outputs_dir: "outputs"
+
+use_feature_subset: true
+feature_subset:
+  processed_dir: "processed_15_all"
+  feature_preset: "all"
+  feature_subset:
+    - relative_position
+    - sd2
+    - sin_time_of_night
+    - rolling_mean_hr
+    - rmssd
+    - time_of_night
+    - energy
+    - rolling_hr_range
+    - acceleration_jerk
+    - rolling_mean_acc
+    - rms
+    - lf
+    - rolling_std_acc
+    - zero_crossing
+    - hr_slope
+    - hf
+    - lf_hf
+    - hr_delta
+
+sequence_length: 30
+step: 1
+require_contiguous: true
+
+model_type: "gru_real"
+
+quantize_int8: true
+representative_steps: 200
+
+use_reduce_lr_on_plateau: false

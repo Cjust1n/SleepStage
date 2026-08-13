@@ -1,0 +1,6 @@
+# Parameter terbaik dari tuning dengan MA-2
+PROMINENCE_FACTOR=0.010
+BETA_OFFSET=0.025
+REFRACTORY_MS=200
+# Kinerja: 98.5% valid, 1.5% no peak
+# Mean HR: 102.5 BPM
